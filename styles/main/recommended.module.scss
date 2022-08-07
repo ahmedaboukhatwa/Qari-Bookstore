@@ -122,93 +122,15 @@
 }
 @media (max-width: 1200px) and (min-width: 993px) {
     .recommended{
-        // .recommendedTitle{
-        //     display: flex;
-        //     overflow: hidden;
-        //     justify-content: center;
-        //     width: 100%;
-        //     margin-top: 35px;
-        //     .icon{
-        //         color: $DarkBlue;
-        //         width: 15px;
-        //         margin-top: -25px;
-        //     }
-        //     h2{
-        //         color: $Brown;
-        //         font-size: 40px;
-        //         margin: 0;
-        //         @extend .title;
-        //     }
-        // }
         .recommendedBooks{
             li{
             width:32.3%;
             margin: 0 1% 1% 0 ;
-            // .bookmark{
-            //     cursor: pointer;
-            //     position: absolute;
-            //     right: 30px;
-            //     top: -5px;
-            //     color: $DarkBlue;
-            //     z-index: 99;
-            //     width: 40px;
-            //     overflow: hidden;
-            //     .heartIcon{
-            //         color: $LightGrey;
-            //         width: 20px;
-            //         position: absolute;
-            //         transform: translate(10px,15px);
-            //     }
-            // }
-            .bookFooter{
-                // background-color: white;
-                // padding: 10px;
-                // display: flex;
-                // flex-direction: column; 
-                // .bookIntro{
-                //     // display: flex;
-                //     // flex-direction: column;
-                //     // align-items: center;
-                //     h2{
-                //         margin: 0;
-                //         padding: 0;
-                //         font-size: 30px;
-                //     }
-                //     span{
-                //         margin-bottom: 10px;
-                //         font-weight: bold;
-                //     }
-                // }
-                // .bookPrice{
-                //     display: flex;
-                //     justify-content: space-around;
-                //     h3{
-                //         color: $Brown;
-                //         margin: 0;
-                //         padding: 0;
-                //         font-size: 40px;
-                //     }
-                //     button{
-                //         background-color: $DarkBlue;
-                //         padding: 5px 50px;
-                //         cursor: pointer;
-                //         outline: none;
-                //         font-size: 20px;
-                //         color: $LightGrey;
-                //         border: none;
-                //     }
-                // }    
-            }
             }
         }
         .recommendedAuthors{
-            // display: flex;
-            // flex-wrap: wrap;
-            // list-style: none;
-            // width: 100%;
             padding: 0;
             justify-content: space-around;
-            // border-top: 1px solid $DarkBlue;
             li{
             padding: 10px;
             border-radius: 10px;
@@ -219,7 +141,6 @@
             img{
                 width: 140px !important;
                 height: 140px !important;
-                //border-radius: 50%;
             }
             h3{
                 color: $Brown;
@@ -255,13 +176,9 @@
                 padding: 10px;
                 display: flex;
                 flex-direction: column; 
-                .bookIntro{
-                    // display: flex;
-                    // flex-direction: column;
-                    // align-items: center;
+                .bookIntro{ 
                     h2{
-                        // margin: 0;
-                        // padding: 0;
+                    
                         font-size: 20px;
                     }
                     span{
@@ -286,13 +203,8 @@
             }
         }
         .recommendedAuthors{
-            // display: flex;
-            // flex-wrap: wrap;
-            // list-style: none;
-            // width: 100%;
             padding: 0;
             justify-content: space-around;
-            // border-top: 1px solid $DarkBlue;
             li{
             padding: 10px;
             border-radius: 10px;
@@ -480,8 +392,6 @@
             li{
                 padding: 15px 0;
                 width: 33%;
-            //    height: 100px;
-            //    overflow: hidden;
             &:first-child{
                 display: none;
             }
