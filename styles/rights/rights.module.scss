@@ -1,0 +1,17 @@
+@import "../variables.module.scss";
+.rights{
+    background-color: $DarkBlue;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @extend .container;
+    span{
+        color: $LightGrey;
+        a{
+            margin-left: 5px;
+            &:hover{
+                color: $Brown;
+            }
+        }
+    }
+}
+

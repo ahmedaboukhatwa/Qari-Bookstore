@@ -1,0 +1,152 @@
+@import "../variables.module.scss";
+.navbar{
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    background-color: $DarkBlue;
+    color: $LightGrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @extend .container; 
+    span{
+        background-color: $Brown;
+
+    }
+    nav{
+        a{
+            font-size: 25px;
+            padding: 25px;
+            &:hover{
+                background-color: $Brown;
+            }     
+        }
+        .active{
+            background-color: $Brown;         
+        }
+    }
+    ul{
+        div{
+            display: inline-block;
+            cursor: pointer;
+            .icon{
+                width: 25px;
+                margin: 0 15px;
+            }
+            span{
+                background-color: red;
+                display: flex;
+                justify-content: center;
+                border-radius: 50%;
+                width: 20px;
+                font-size: 13px;
+                position: absolute;
+                transform: translate(30px, -15px);
+            }
+        }
+    }
+}
+@media (max-width: 992px) and (min-width: 769px) {
+.navbar{
+    span{
+        font-size: 21px;
+    }
+    nav{
+        a{
+            font-size: 15px;
+            padding: 25px;
+            &:hover{
+                background-color: $Brown;
+            }     
+        }
+    }
+    ul{
+        .icon{
+            width: 20px;
+        }
+    }
+}
+}
+@media (max-width: 768px) and (min-width: 701px) {
+    .navbar{
+        span{
+            font-size: 22px;
+        }
+        nav{
+            a{
+                font-size: 13px;
+                padding: 20px;
+                &:hover{
+                    background-color: $Brown;
+                }     
+            }
+        }
+        ul{
+            .icon{
+                width: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .navbar{
+        span{
+            font-size: 19px;
+        }
+        nav{
+            a{
+                font-size: 10px;
+                padding: 23px 20px;
+                &:hover{
+                    background-color: $Brown;
+                }     
+            }
+        }
+        ul{
+            div{
+                .icon{
+                    width: 17px;
+                    margin: 0 15px;
+                }
+                span{
+                    width: 15px;
+                    font-size: 12px;
+                    transform: translate(25px, -13px);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 600px){
+    .navbar{
+        padding: 0;
+        span{
+            font-size: 17px;
+            padding: 17px 7px;
+        }
+        nav{
+            a{
+                font-size: 13px;
+                padding: 25px 15px;
+                &:hover{
+                    background-color: $Brown;
+                }     
+            }
+        }
+        ul{
+            div{
+                .icon{
+                    width: 14px;
+                    margin: 0 15px;
+                }
+                span{
+                    width: 12px;
+                    font-size: 10px;
+                    padding: 0;
+                    transform: translate(20px, -10px);
+                }
+            } 
+        }
+    }
+}
