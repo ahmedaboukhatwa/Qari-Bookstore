@@ -12,7 +12,7 @@ export default function Search() {
                         <option>Autors</option>
                         <option>Books</option>
                     </select>
-                    <input type='search' />
+                    <input type='search'/>
                 </div>
             </div>
         </Fragment>
