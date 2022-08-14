@@ -75,9 +75,14 @@ export default function BooksProvider({children}) {
     const [favoritedBooks ,setFavoritedBooks] = useState(books.filter(book =>{
         return book.isFavorited == true;
     }));
-    const [inCartBooks ,setInCartBooks] = useState(books.filter(book =>{
-        return book.inCart == true;
-    }))
+    const [category,setCategory]=useState("All");
+    const [filterdBooks,setFilterdBooks] = useState(books.filter(book=> 
+        { 
+
+            return(book.category == category)
+        
+        }));
+    const [inCartBooks ,setInCartBooks] = useState(books.map(book =>book));
     const [favoritedCount,setFavoritedCount] = useState(favoritedBooks.length);
     const [inCartCount,setInCartCount] = useState(inCartBooks.length);
 
@@ -95,13 +100,30 @@ export default function BooksProvider({children}) {
             return book.inCart == true;
         }));
     };
+    const selectCategory = (e)=>{
+        setCategory(e.target.value);
+        setBooks(books.map(book=>book));
+        setFilterdBooks(books.filter(book=> 
+            { 
+
+                return(book.category == category)
+            
+            }))
+        console.log(filterdBooks);
+    }
     useEffect(()=>{
         setFavoritedCount(favoritedBooks.length);
         setInCartCount(inCartBooks.length);
+
     },[books])
     
     return (
-        <BooksContext.Provider value={{books,favoritedBooks,favoritedCount,inCartCount,addToCart,clickFavorite}}>
+        <BooksContext.Provider value={{
+            books,
+            favoritedBooks,favoritedCount,clickFavorite,
+            inCartCount,addToCart,
+            filterdBooks,category,selectCategory,
+            }}>
             {children}
         </BooksContext.Provider >
     )

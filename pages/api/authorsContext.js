@@ -9,7 +9,7 @@ export const authors = [
         name:"Robert Greene",
         img:"/images/authors/Robert Greene.jpg",
         category: "Political",
-        books:[{bookName:"48 Laws Of Power"}]
+        books:[{bookName:"48 Laws Of Power"},{bookName:"33 strategies of war"}]
         
     },
     {

@@ -30,7 +30,7 @@ export default function Navbar() {
                         <a className={router.asPath === '/categories' ? styles.active : ''}>Categories</a>
                     </Link>
                     <Link href='/contact'>
-                        <a className={router.asPath === '/authors' ? styles.active : ''}>Contact</a>
+                        <a className={router.asPath === '/contact' ? styles.active : ''}>Contact</a>
                     </Link>
                 </nav>
                 <ul>

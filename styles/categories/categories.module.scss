@@ -1,0 +1,427 @@
+@import "../variables.module.scss";
+.categories{
+    display: flex;
+    //flex-direction: row;
+    //align-items: center;
+    justify-content: flex-end;
+    //flex-wrap: wrap;
+    @extend .container;
+    select{
+        position: sticky;
+        top: 90px;
+        width: 25%;
+        height: 50px;
+        margin-top: 68px;
+        background-color: $DarkBlue;
+        color: $LightGrey;
+        font-size: 20px;
+        padding-left: 50px;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .content{
+        padding-left: 50px;
+        width: 75%;
+    .categoriesBooks{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        color: $Brown;
+        padding: 0;
+        justify-content:baseline;
+        .categoriesTitle{
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+            width: 100%;
+            //margin-top: 35px;
+            .icon{
+                color: $DarkBlue;
+                width: 15px;
+                margin-top: -25px;
+            }
+            h2{
+                color: $Brown;
+                font-size: 40px;
+                margin: 0;
+               // @extend .title;
+            }
+        }
+        li{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border-radius: 10px;
+        width:31%;
+        margin: 0 1%;
+        .bookmark{
+            cursor: pointer;
+            position: absolute;
+            right: 30px;
+            top: -5px;
+            color: $DarkBlue;
+            z-index: 99;
+            width: 40px;
+            overflow: hidden;
+            .heartIcon{
+                color: $LightGrey;
+                width: 20px;
+                position: absolute;
+                transform: translate(10px,15px);
+            }
+        }
+        .bookFooter{
+            background-color: white;
+            padding: 10px;
+            display: flex;
+            flex-direction: column; 
+            .bookIntro{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h2{
+                    margin: 0;
+                    padding: 0;
+                    font-size: 25px;
+                }
+                span{
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                }
+            }
+            .bookPrice{
+                display: flex;
+                justify-content: space-around;
+                h3{
+                    color: $Brown;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 40px;
+                }
+                button{
+                    background-color: $DarkBlue;
+                    padding: 5px 30px;
+                    cursor: pointer;
+                    outline: none;
+                    font-size: 20px;
+                    color: $LightGrey;
+                    border: none;
+                }
+            }    
+        }
+        }
+    }
+    .categoriesAuthors{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        width: 100%;
+        justify-content: space-between;
+        border-top: 1px solid $DarkBlue;
+        padding: 0;
+        li{
+        padding: 15px 0;
+        border-radius: 10px;
+        width:19.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 150px !important;
+            height: 150px !important;
+            border-radius: 50%;
+        }
+        h3{
+            color: $Brown;
+        }
+        }
+    }
+}
+}
+// @media (max-width: 1200px) and (min-width: 993px) {
+//     .categories{
+//         .categoriesBooks{
+//             li{
+//             width:32.3%;
+//             margin: 0 1% 1% 0 ;
+//             }
+//         }
+//         .categoriesAuthors{
+//             padding: 0;
+//             justify-content: space-around;
+//             li{
+//             padding: 10px;
+//             border-radius: 10px;
+//             width:16.5%;
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             img{
+//                 width: 140px !important;
+//                 height: 140px !important;
+//             }
+//             h3{
+//                 color: $Brown;
+//                 font-size: 15px;
+//             }
+//             }
+//         }
+//     }
+// }
+// @media (max-width: 992px) and (min-width: 769px) {
+//     .categories{
+//         .categoriesTitle{
+//             .icon{
+//                 width: 10px;
+//             }
+//             h2{
+//                 font-size: 30px;
+//             }
+//         }
+//         .categoriesBooks{
+//             li{
+//             width:31.3%;
+//             margin: 0 2% 2% 0 ;
+//             .bookmark{
+//                 width: 35px;
+//                 .heartIcon{
+//                     width: 20px;
+//                     transform: translate(7.5px,12px);
+//                 }
+//             }
+//             .bookFooter{
+//                 background-color: white;
+//                 padding: 10px;
+//                 display: flex;
+//                 flex-direction: column; 
+//                 .bookIntro{ 
+//                     h2{
+                    
+//                         font-size: 20px;
+//                     }
+//                     span{
+//                         font-size: 14px;
+//                         margin-bottom: 10px;
+//                         font-weight: bold;
+//                     }
+//                 }
+//                 .bookPrice{
+//                     display: flex;
+//                     justify-content: space-around;
+//                     h3{
+//                         font-size: 25px;
+//                     }
+//                     button{
+//                         background-color: $DarkBlue;
+//                         padding: 3px 35px;
+//                         font-size: 15px;
+//                     }
+//                 }    
+//             }
+//             }
+//         }
+//         .categoriesAuthors{
+//             padding: 0;
+//             justify-content: space-around;
+//             li{
+//             padding: 10px;
+//             border-radius: 10px;
+//             width:16.5%;
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             img{
+//                 width: 120px !important;
+//                 height: 120px !important;
+//             }
+//             h3{
+//                 color: $Brown;
+//                 font-size: 13px;
+//             }
+//             }
+//         }
+//     }
+// }
+// @media (max-width: 768px) and (min-width: 701px) {
+//     .categories{
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         flex-wrap: wrap;
+//         @extend .container;
+//         .categoriesTitle{
+//             display: flex;
+//             overflow: hidden;
+//             justify-content: center;
+//             width: 100%;
+//             margin-top: 35px;
+//             .icon{
+//                 color: $DarkBlue;
+//                 width: 15px;
+//                 margin-top: -25px;
+//             }
+//             h2{
+//                 color: $Brown;
+//                 font-size: 40px;
+//                 margin: 0;
+//                 @extend .title;
+//             }
+//         }
+//         .categoriesBooks{
+//             li{
+//             width:46%;
+//             margin: 0 4% 4% 0 ;
+//             }
+//         }
+//         .categoriesAuthors{
+//             padding: 0;
+//             li{
+//                 padding: 5px 0;
+//             img{
+//                 width: 90px !important;
+//                 height: 90px !important;
+//             }
+//             h3{
+//                 font-size: 12px;
+//                 font-weight: bold;
+//             }
+//             }
+//         }
+//     }
+// }
+// @media (max-width: 700px) {
+//     .categories{
+//         .categoriesTitle{
+//             .icon{
+//                 width: 10px;
+//             }
+//             h2{
+//                 font-size: 30px;
+//             }
+//         }
+//         .categoriesBooks{
+//             li{
+//             width:46%;
+//             margin: 0 4% 4% 0 ;
+//             .bookFooter{
+//                 .bookIntro{
+//                     h2{
+//                         margin: 0;
+//                         padding: 0;
+//                         font-size: 17px;
+//                     }
+//                     span{
+//                         margin-bottom: 10px;
+//                         font-weight: bold;
+//                     }
+//                 }
+//                 .bookPrice{
+//                     h3{
+//                         font-size: 25px;
+//                     }
+//                     button{
+//                         background-color: $DarkBlue;
+//                         padding: 5px 30px;
+//                         cursor: pointer;
+//                         outline: none;
+//                         font-size: 15px;
+//                         color: $LightGrey;
+//                         border: none;
+//                     }
+//                 }    
+//             }
+//             }
+//         }
+//         .categoriesAuthors{
+//             padding: 0;
+//             li{
+//                 padding: 5px 0;
+//                 &:last-child{
+//                     display: none;
+//                 }
+//             img{
+//                 width: 90px !important;
+//                 height: 90px !important;
+//             }
+//             h3{
+//                 font-size: 12px;
+//                 font-weight: bold;
+//             }
+//             }
+//         }
+//     }
+// }
+// @media (max-width: 600px){
+//     .categories{
+//         .categoriesTitle{
+//             .icon{
+//                 width: 10px;
+//             }
+//             h2{
+//                 font-size: 30px;
+//             }
+//         }
+//         .categoriesBooks{
+//             li{
+//             width:46%;
+//             margin: 0 4% 4% 0 ;
+//             .bookmark{
+//                 right: 20px;
+//                 top: -5px;
+//                 width: 30px;
+//                 .heartIcon{
+//                     width: 15px;
+//                     transform: translate(7px,12px);
+//                 }
+//             }
+//             .bookFooter{
+//                 .bookIntro{
+//                     h2{
+//                         margin: 0;
+//                         padding: 0;
+//                         font-size: 17px;
+//                     }
+//                     span{
+//                         margin-bottom: 10px;
+//                         font-size: 13px;
+//                         font-weight: bold;
+//                     }
+//                 }
+//                 .bookPrice{
+//                     h3{
+//                         font-size: 20px;
+//                     }
+//                     button{
+//                         background-color: $DarkBlue;
+//                         padding: 3px 30px;
+//                         cursor: pointer;
+//                         outline: none;
+//                         font-size: 15px;
+//                         color: $LightGrey;
+//                         border: none;
+//                     }
+//                 }    
+//             }
+//             }
+//         }
+//         .categoriesAuthors{
+//             width: 95%;
+//             li{
+//                 padding: 15px 0;
+//                 width: 33%;
+//             &:first-child{
+//                 display: none;
+//             }
+//             img{
+//                 width: 100px !important;
+//                 height: 100px !important;
+//             }
+//             h3{
+//                 font-size: 15px;
+//                 font-weight: bold;
+//             }
+//             }
+//         }
+//     }
+// }

@@ -1,0 +1,79 @@
+@import "../variables.module.scss";
+.contact{
+    @extend .container;
+    display: flex;
+    flex-direction: column;
+
+    input{
+        height: 50px;
+        border-radius: 5px;
+        margin-top: 5px;
+        padding: 10px;
+        outline: none;
+        border: 1px solid $Brown;
+        font-size: 20px;
+        &:first-child{
+            margin-top: 50px;
+        }
+        &::placeholder{
+            font-size: 20px;
+        }
+    }
+    textarea{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 350px;
+        max-height: 350px;
+        border-radius: 5px;
+        margin-top: 25px;
+        padding: 10px;
+        outline: none;
+        border: 1px solid $Brown;
+        font-size: 20px;
+        &::placeholder{
+            font-size: 20px;
+        }
+    }
+    button{
+        border-radius: 5px;
+        background-color: $DarkBlue;
+        color: $LightGrey;
+        padding: 15px 0;
+        margin: 21px 0;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        font-size: 20px;
+    }
+}
+@media (max-width: 992px) and (min-width: 769px) {
+    .contact{
+        button{
+            margin: 22.2px 0;
+        }
+    }
+}
+@media (max-width: 768px) and (min-width: 701px) {
+    .contact{
+        button{
+            margin: 22px 0;
+        }
+    }
+}
+@media (max-width: 700px) {
+    .contact{
+        button{
+            margin: 23.5px 0;
+        }
+    }
+}
+@media (max-width: 600px){
+    .contact{
+        input{
+            height: 40px;
+        }
+        button{
+            margin: 35px 0;
+        }
+    }
+}
