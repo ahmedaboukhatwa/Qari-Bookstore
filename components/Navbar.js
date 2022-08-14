@@ -34,7 +34,7 @@ export default function Navbar() {
                     </Link>
                 </nav>
                 <ul>
-                    <Link href='/'>
+                    <Link href='/favorited'>
                         <div>
                             <FontAwesomeIcon className={styles.icon} icon={faHeart} />
                             <span>
@@ -42,7 +42,7 @@ export default function Navbar() {
                             </span>
                         </div>
                     </Link>
-                    <Link href='/'>
+                    <Link href='/cart'>
                         <div>
                             <FontAwesomeIcon className={styles.icon} icon={faCartShopping} />
                             <span>{inCartCount}</span>

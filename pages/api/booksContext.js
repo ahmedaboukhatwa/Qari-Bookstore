@@ -82,7 +82,10 @@ export default function BooksProvider({children}) {
             return(book.category == category)
         
         }));
-    const [inCartBooks ,setInCartBooks] = useState(books.map(book =>book));
+    const [inCartBooks ,setInCartBooks] = useState(books.filter(book =>{
+        return(book.inCart == true)
+    }
+        ));
     const [favoritedCount,setFavoritedCount] = useState(favoritedBooks.length);
     const [inCartCount,setInCartCount] = useState(inCartBooks.length);
 
