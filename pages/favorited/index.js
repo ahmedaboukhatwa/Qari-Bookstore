@@ -9,7 +9,7 @@ export default function Favorited() {
     const {books} = useContext(BooksContext);
     const {favoritedBooks} = useContext(BooksContext);
     const {addToCart} = useContext(BooksContext);
-    const {clickFavorite} = useContext(BooksContext);
+    const {clickFavorite,favoritedCount} = useContext(BooksContext);
     const booksList = favoritedBooks.map((book,i) => {
         return(
             <li key={i}>
@@ -42,7 +42,13 @@ export default function Favorited() {
                     <FontAwesomeIcon className={styles.icon} icon={faQuoteRight} />
                 </span>
                 <ul className={styles.favoritedBooks}>
-                    {booksList}
+                {
+                        favoritedCount >0?booksList:
+                        <div className={styles.noDataToShow}>
+                        <FontAwesomeIcon className={styles.cartIcon} icon={faHeart}/>              
+                        <h2>No Data To Show</h2>
+                        </div>
+                    }
                 </ul >
             </div>
         </Fragment>

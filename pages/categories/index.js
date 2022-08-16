@@ -72,20 +72,20 @@ export default function Categories() {
             </li>
         )
     });
-    const filterdAuthors= authors.filter(author=> 
-        { 
+    // const filterdAuthors= authors.filter(author=> 
+    //     { 
 
-            return(author.category == category)
+    //         return(author.category == category)
         
-        });
-        const filterdAuthorsMap = filterdAuthors.map((author,i) => {
-            return(
-                <li key={i}>
-                    <Image src={author.img} alt={author.name} width={100} height={100} />
-                    <h3>{author.name}</h3>
-                </li>
-            )
-        });
+    //     });
+    //     const filterdAuthorsMap = filterdAuthors.map((author,i) => {
+    //         return(
+    //             <li key={i}>
+    //                 <Image src={author.img} alt={author.name} width={100} height={100} />
+    //                 <h3>{author.name}</h3>
+    //             </li>
+    //         )
+    //     });
     return (
         <Fragment>
             <div className={styles.categories}>
@@ -106,9 +106,9 @@ export default function Categories() {
                 </span>
                     {category=="All"?allBooks: filterdBooksMap}
                 </ul >
-                <ul className={styles.categoriesAuthors}>
+                {/* <ul className={styles.categoriesAuthors}>
                 {category=="All"?allAuthors:filterdAuthorsMap}
-                </ul>
+                </ul> */}
                 </div>               
             </div>
         </Fragment>
