@@ -7,11 +7,11 @@ export default function Search() {
             <div className={styles.search}>
                 <Logo />
                 <div className={styles.searchBox}>
-                    <select>
+                    {/* <select>
                         <option>All</option>
                         <option>Autors</option>
                         <option>Books</option>
-                    </select>
+                    </select> */}
                     <input type='search'/>
                 </div>
             </div>

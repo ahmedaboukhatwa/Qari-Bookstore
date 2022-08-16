@@ -4,7 +4,6 @@
     //flex-direction: row;
     //align-items: center;
     justify-content: flex-end;
-    //flex-wrap: wrap;
     @extend .container;
     select{
         position: sticky;
@@ -29,6 +28,7 @@
         color: $Brown;
         padding: 0;
         justify-content:baseline;
+        margin-bottom: 136px;
         .categoriesTitle{
             display: flex;
             overflow: hidden;
@@ -54,6 +54,7 @@
         border-radius: 10px;
         width:31%;
         margin: 0 1%;
+        
         .bookmark{
             cursor: pointer;
             position: absolute;
