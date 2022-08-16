@@ -6,14 +6,14 @@ export default function Search() {
         <Fragment>
             <div className={styles.search}>
                 <Logo />
-                <div className={styles.searchBox}>
+                {/* <div className={styles.searchBox}>
                     <select>
                         <option>All</option>
                         <option>Autors</option>
                         <option>Books</option>
                     </select>
                     <input type='search'/>
-                </div>
+                </div> */}
             </div>
         </Fragment>
     )

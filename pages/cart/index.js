@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faQuoteLeft, faQuoteRight, faCirclePlus , faAngleRight} from '@fortawesome/free-solid-svg-icons'
+import { faQuoteLeft, faQuoteRight, faCirclePlus , faAngleRight ,faCartShopping} from '@fortawesome/free-solid-svg-icons'
 import styles from '../../styles/cart/cart.module.scss'
 import React, { Fragment,useContext, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
@@ -9,6 +9,7 @@ import Link from 'next/link'
 export default function Cart() {
     const {
         inCartBooks,
+        inCartCount,
         addToCart,
         increaseQuantity,
         decreaseQuantity,
@@ -52,7 +53,14 @@ export default function Cart() {
                 <div className={styles.checkOut}>
                     
                 <ul className={styles.cartBooks}>
-                    {booksList}
+                    {
+                        inCartCount >0?booksList:
+                        <div className={styles.noDataToShow}>
+                        <FontAwesomeIcon className={styles.cartIcon} icon={faCartShopping}/>              
+                        <h2>No Data To Show</h2>
+                        </div>
+                    }
+                
                 </ul >
                 <ul className={styles.bill}>
                 <div className={styles.voucher}>

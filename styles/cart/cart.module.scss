@@ -27,14 +27,11 @@
     }
     .checkOut{
         display: flex;
-       // background-color: black;
         width: 100%;
         justify-content: center;
         .bill{
             display: flex;
             flex-direction: column;
-            //background-color: rgb(0, 255, 229);
-            //padding: 0;
             padding-left: 50px;
             width: 500px;
             height: 500px;
@@ -87,7 +84,7 @@
                 background-color: white;
                 border-radius: 5px;
                 margin-bottom: 10px;
-
+                padding: 0 10px;
             }
             .buy{
                 width: 100%;
@@ -100,6 +97,25 @@
             }
         }
         .cartBooks{
+            .noDataToShow{
+                margin-top: -30px;
+                width: 70%;
+                height: 100%;
+                background-color: $Blue;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                .cartIcon{
+                    width: 40%;
+                    columns: $Brown;
+                    
+                }
+                h2{
+                    font-size: 30px;
+                }
+            }
             display: flex;
             flex-direction: column;
             list-style: none;
@@ -167,76 +183,137 @@
 }
 @media (max-width: 1200px) and (min-width: 993px) {
     .cart{
-        .cartBooks{
-            li{
-            width:32.3%;
-            margin: 0 1% 1% 0 ;
+        .cartTitle{
+            .icon{
+
+            }
+            h2{
+
+            }
+        }
+        .checkOut{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            .bill{
+                display: flex;
+                flex-direction: column;
+                padding-left: 50px;
+                width: 500px;
+                height: 500px;
+                .voucher{
+                    background-color: white;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+                    padding: 5px;
+                    h4{
+                        margin:10px 0;
+                        color: $Brown;
+                    }
+                    input{
+                        height: 30px;
+                        border-color: $Brown;
+                        width: 79%;
+                        margin-right: 1%;
+                        border-radius: 5px;
+                    }
+                    button{
+
+                    }
+                }
+                .moreBooks{
+
+                    .circlePlusIcon{
+
+                    }
+                    h3{
+                        margin-right: 110px;
+                    }
+                    .angleRightIcon{
+                    }
+                }
+                .totalPrice{
+                    background-color: white;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+                    padding: 0 10px;
+                }
+                .buy{
+                    width: 100%;
+                    padding: 15px;
+                    background-color: $DarkBlue;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+            .cartBooks{
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                color: $Brown;
+                padding: 0;
+                width: 70%;
+                .noDataToShow{
+                    margin-top: 0px;
+                    width: 70%;
+                    height: 70%;
+                }
+                li{
+                display: flex;
+                border-radius: 10px;
+                width:100%;
+                height: 150px;
+                margin-bottom: 5px;
+                .bookFooter{
+ 
+                    .bookIntro{
+
+                        h2{
+                            margin: 0;
+                            padding: 0;
+                            font-size: 20px;
+                        }
+                        span{
+                            margin-bottom: 10px;
+                            font-weight: bold;
+                        }
+                    }
+                    .bookPrice{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        h3{
+                            color: $Brown;
+                            margin: 0;
+                            padding: 0;
+                            font-size: 30px;
+                        }
+                        .quantity{
+                            button{
+                                padding: 0px 10px;
+                            }
+                            h5{
+                                font-size: 20px;
+                                margin:0 15px;
+                            }
+                        }                 
+                    }    
+                }
+                }
             }
         }
     }
 }
 @media (max-width: 992px) and (min-width: 769px) {
     .cart{
-        .cartTitle{
-            .icon{
-                width: 10px;
-            }
-            h2{
-                font-size: 30px;
-            }
-        }
-        .cartBooks{
-            li{
-            width:31.3%;
-            margin: 0 2% 2% 0 ;
-            .bookmark{
-                width: 35px;
-                .heartIcon{
-                    width: 20px;
-                    transform: translate(7.5px,12px);
-                }
-            }
-            .bookFooter{
-                background-color: white;
-                padding: 10px;
-                display: flex;
-                flex-direction: column; 
-                .bookIntro{ 
-                    h2{
-                    
-                        font-size: 20px;
-                    }
-                    span{
-                        font-size: 14px;
-                        margin-bottom: 10px;
-                        font-weight: bold;
-                    }
-                }
-                .bookPrice{
-                    display: flex;
-                    justify-content: space-around;
-                    h3{
-                        font-size: 25px;
-                    }
-                    button{
-                        background-color: $DarkBlue;
-                        padding: 3px 35px;
-                        font-size: 15px;
-                    }
-                }    
-            }
-            }
-        }
-    }
-}
-@media (max-width: 768px) and (min-width: 701px) {
-    .cart{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        @extend .container;
+        margin-bottom: 12px;
         .cartTitle{
             display: flex;
             overflow: hidden;
@@ -252,113 +329,219 @@
                 color: $Brown;
                 font-size: 40px;
                 margin: 0;
-                @extend .title;
             }
         }
-        .cartBooks{
-            li{
-            width:46%;
-            margin: 0 4% 4% 0 ;
+        .checkOut{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .bill{
+                padding: 0;
+                width: 100%;
+                .voucher{
+                    h4{
+                    }
+                    input{            
+                    }
+                    button{
+                    }
+                }
+                .moreBooks{
+                    .circlePlusIcon{
+                    }
+                    h3{
+                        margin-right: 65%;
+                    }
+                    .angleRightIcon{
+                    }
+                }
+                .totalPrice{
+                    font-size: 20px;
+                }
+                .buy{
+                }
+            }
+            .cartBooks{
+                width: 100%;
+                align-items: center;
+                .noDataToShow{
+                    margin-top: 0px;
+                    width: 50%;
+                    height: 100%;
+                    padding: 50px;
+                    border-radius: 10%;
+                    .cartIcon{
+                        width: 30%;
+                        columns: $Brown;
+                        
+                    }
+                    h2{
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) and (min-width: 701px) {
+    .cart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+        .cartTitle{
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+            width: 100%;
+            margin-top: 35px;
+            .icon{
+                color: $DarkBlue;
+                width: 15px;
+                margin-top: -25px;
+            }
+            h2{
+                color: $Brown;
+                font-size: 40px;
+                margin: 0;
+            }
+        }
+        .checkOut{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .bill{
+                padding: 0;
+                width: 100%;
+                .moreBooks{
+                    h3{
+                        margin-right: 50%;
+                    }
+                }
+                .totalPrice{
+                    font-size: 20px;
+                }
+            }
+            .cartBooks{
+                width: 100%;
+                align-items: center;
+                .noDataToShow{
+                    margin-top: 0px;
+                    width: 50%;
+                    height: 100%;
+                    padding: 50px 0;
+                    border-radius: 10%;
+                    .cartIcon{
+                        width: 30%;
+                        columns: $Brown;
+                        
+                    }
+                    h2{
+                        font-size: 30px;
+                    }
+                }
             }
         }
     }
 }
 @media (max-width: 700px) {
     .cart{
+        margin: 0;
         .cartTitle{
             .icon{
-                width: 10px;
+                color: $DarkBlue;
+                width: 15px;
+                margin-top: -25px;
             }
             h2{
-                font-size: 30px;
+                color: $Brown;
+                font-size: 40px;
+                margin: 0;
             }
         }
-        .cartBooks{
-            li{
-            width:46%;
-            margin: 0 4% 4% 0 ;
-            .bookFooter{
-                .bookIntro{
-                    h2{
-                        margin: 0;
-                        padding: 0;
-                        font-size: 17px;
-                    }
-                    span{
-                        margin-bottom: 10px;
-                        font-weight: bold;
+        .checkOut{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .bill{
+                padding: 0;
+                width: 100%;
+                .moreBooks{         
+                    h3{
+                        margin-right: 55%;
                     }
                 }
-                .bookPrice{
-                    h3{
-                        font-size: 25px;
-                    }
-                    button{
-                        background-color: $DarkBlue;
-                        padding: 5px 30px;
-                        cursor: pointer;
-                        outline: none;
-                        font-size: 15px;
-                        color: $LightGrey;
-                        border: none;
-                    }
-                }    
+                .totalPrice{
+                    font-size: 20px;
+                }
+                .buy{
+                }
             }
+            .cartBooks{
+                width: 100%;
+                align-items: center;
+                .noDataToShow{
+                    margin-top: 0px;
+                    width: 70%;
+                    height: 100%;
+                    padding: 50px 0;
+                    border-radius: 10%;
+                    .cartIcon{
+                        width: 30%;
+                        columns: $Brown;
+                        
+                    }
+                    h2{
+                        font-size: 30px;
+                    }
+                }             
+                li{                   
+                .bookFooter{
+                display: flex;
+                flex-direction: column;
+                    .bookPrice{
+                        h3{ 
+                            font-size: 30px;    
+                        }               
+                    }    
+                }
+                }
             }
         }
     }
 }
 @media (max-width: 600px){
     .cart{
-        .cartTitle{
-            .icon{
-                width: 10px;
-            }
-            h2{
-                font-size: 30px;
-            }
-        }
-        .cartBooks{
-            li{
-            width:46%;
-            margin: 0 4% 4% 0 ;
-            .bookmark{
-                right: 20px;
-                top: -5px;
-                width: 30px;
-                .heartIcon{
-                    width: 15px;
-                    transform: translate(7px,12px);
-                }
-            }
-            .bookFooter{
-                .bookIntro{
-                    h2{
-                        margin: 0;
-                        padding: 0;
-                        font-size: 17px;
+        .checkOut{        
+            .bill{
+                .moreBooks{
+                    .circlePlusIcon{
                     }
-                    span{
-                        margin-bottom: 10px;
-                        font-size: 13px;
-                        font-weight: bold;
-                    }
-                }
-                .bookPrice{
                     h3{
-                        font-size: 20px;
+                        margin-right: 50%;
                     }
-                    button{
-                        background-color: $DarkBlue;
-                        padding: 3px 30px;
-                        cursor: pointer;
-                        outline: none;
-                        font-size: 15px;
-                        color: $LightGrey;
-                        border: none;
+                    .angleRightIcon{
                     }
-                }    
+                }
+                .totalPrice{
+                    font-size: 20px;
+                }
             }
+            .cartBooks{
+                width: 100%;
+                li{
+                .bookFooter{
+                    display: flex;
+                    flex-direction: column;
+                    .bookPrice{
+                        h3{  
+                            font-size: 35px;    
+                        }             
+                    }    
+                }
+                }
             }
         }
     }
