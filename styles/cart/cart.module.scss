@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 12px;
+    min-height: 637px;
     @extend .container;
     .cartTitle{
         display: flex;

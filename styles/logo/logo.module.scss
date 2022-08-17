@@ -1,7 +1,7 @@
 @import "../variables.module.scss";
 .logo{
     color: $LightGrey;
-    font-size: 35px;
-    padding: 18px 5px;
+    font-size: 30px;
+    padding: 15px 5px;
     @extend .title;
 }

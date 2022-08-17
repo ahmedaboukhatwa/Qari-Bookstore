@@ -1,8 +1,10 @@
 @import "../variables.module.scss";
 .rights{
+    width: 100%;
     background-color: $DarkBlue;
     padding-top: 15px;
     padding-bottom: 15px;
+    z-index: 1;
     @extend .container;
     span{
         color: $LightGrey;

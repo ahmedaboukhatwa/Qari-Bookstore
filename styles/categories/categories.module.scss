@@ -1,16 +1,15 @@
 @import "../variables.module.scss";
 .categories{
     display: flex;
-    //flex-direction: row;
-    //align-items: center;
     justify-content: flex-end;
+    min-height: 637px;
     @extend .container;
     select{
         position: sticky;
         top: 90px;
         width: 25%;
         height: 50px;
-        margin-top: 68px;
+        margin-top: 78px;
         background-color: $DarkBlue;
         color: $LightGrey;
         font-size: 20px;
@@ -28,7 +27,6 @@
         color: $Brown;
         padding: 0;
         justify-content:baseline;
-        margin-bottom: 136px;
         .categoriesTitle{
             display: flex;
             overflow: hidden;
@@ -48,144 +46,20 @@
             }
         }
         li{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        border-radius: 10px;
-        width:31%;
-        margin: 0 1%;
-        
-        .bookmark{
-            cursor: pointer;
-            position: absolute;
-            right: 30px;
-            top: -5px;
-            color: $DarkBlue;
-            z-index: 99;
-            width: 40px;
-            overflow: hidden;
-            .heartIcon{
-                color: $LightGrey;
-                width: 20px;
-                position: absolute;
-                transform: translate(10px,15px);
-            }
-        }
-        .bookFooter{
-            background-color: white;
-            padding: 10px;
-            display: flex;
-            flex-direction: column; 
-            .bookIntro{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                h2{
-                    margin: 0;
-                    padding: 0;
-                    font-size: 25px;
-                }
-                span{
-                    margin-bottom: 10px;
-                    font-weight: bold;
-                }
-            }
-            .bookPrice{
-                display: flex;
-                justify-content: space-around;
-                h3{
-                    color: $Brown;
-                    margin: 0;
-                    padding: 0;
-                    font-size: 40px;
-                }
-                button{
-                    background-color: $DarkBlue;
-                    padding: 5px 30px;
-                    cursor: pointer;
-                    outline: none;
-                    font-size: 20px;
-                    color: $LightGrey;
-                    border: none;
-                }
-            }    
-        }
-        }
-    }
-    .categoriesAuthors{
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none;
-        width: 100%;
-        justify-content: baseline;
-        border-top: 1px solid $DarkBlue;
-        padding: 0;
-        li{
-        padding: 15px 0;
-        border-radius: 10px;
-        width:19.5%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        img{
-            width: 150px !important;
-            height: 150px !important;
-            border-radius: 50%;
-        }
-        h3{
-            color: $Brown;
-        }
+        width:23%;
         }
     }
 }
 }
-@media (max-width: 1200px) and (min-width: 993px) {
+@media (max-width: 1250px) and (min-width: 993px) {
     .categories{
-        
         select{
-            position: sticky;
-            top: 90px;
-            width: 25%;
-            height: 50px;
-            margin-top: 68px;
-            background-color: $DarkBlue;
-            color: $LightGrey;
-            font-size: 20px;
-            padding-left: 50px;
-            justify-content: center;
-            cursor: pointer;
+            margin-top: 75px;
         }
         .content{
-            padding-left: 50px;
-            width: 75%;
         .categoriesBooks{
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            color: $Brown;
-            padding: 0;
-            justify-content:baseline;
-            .categoriesTitle{
-                display: flex;
-                overflow: hidden;
-                justify-content: center;
-                width: 100%;
-                //margin-top: 35px;
-                .icon{
-                    color: $DarkBlue;
-                    width: 15px;
-                    margin-top: -25px;
-                }
-                h2{
-                    color: $Brown;
-                    font-size: 40px;
-                    margin: 0;
-                   // @extend .title;
-                }
-            }
             li{
-            width:48%;
-            margin:  1%;
+            width:31%;
             }
         }
         .categoriesAuthors{
@@ -218,102 +92,29 @@
     }
 }
 @media (max-width: 992px) and (min-width: 769px) {
-    .categories{
-        
+    .categories{    
         select{
-            position: sticky;
-            top: 90px;
-            width: 25%;
-            height: 50px;
-            margin-top: 68px;
-            background-color: $DarkBlue;
-            color: $LightGrey;
+            margin-top: 70px;
             font-size: 20px;
-            padding-left: 50px;
-            justify-content: center;
-            cursor: pointer;
+            padding-left: 30px;
         }
         .content{
-            padding-left: 50px;
-            width: 75%;
         .categoriesBooks{
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            color: $Brown;
-            padding: 0;
-            justify-content:baseline;
-            .categoriesTitle{
-                display: flex;
-                overflow: hidden;
-                justify-content: center;
-                width: 100%;
-                //margin-top: 35px;
-                .icon{
-                    color: $DarkBlue;
-                    width: 15px;
-                    margin-top: -25px;
-                }
-                h2{
-                    color: $Brown;
-                    font-size: 40px;
-                    margin: 0;
-                   // @extend .title;
-                }
-            }
             li{
-            width:48%;
-            margin:  1%;
-            }
-        }
-        .categoriesAuthors{
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            width: 100%;
-            justify-content: baseline;
-            border-top: 1px solid $DarkBlue;
-            padding: 0;
-            li{
-            padding: 10px 0;
-            border-radius: 10px;
-            width:19.5%;
-            display: flex;
-            flex-direction: column;
-            img{
-                width: 90px !important;
-                height: 90px !important;
-                border-radius: 50%;
-            }
-            h3{
-                color: $Brown;
-                font-size: 12px;
-                text-align: center;
-            }
+            width:45% !important;
             }
         }
     }
     }
 }
 @media (max-width: 768px) and (min-width: 701px) {
-    .categories{
-        
+    .categories{     
         select{
-            position: sticky;
-            top: 90px;
-            width: 25%;
-            height: 50px;
-            margin-top: 68px;
-            background-color: $DarkBlue;
-            color: $LightGrey;
+            margin-top: 70px;
             font-size: 20px;
             padding-left: 50px;
-            justify-content: center;
-            cursor: pointer;
         }
         .content{
-            padding-left: 50px;
-            width: 75%;
         .categoriesBooks{
             display: flex;
             flex-wrap: wrap;
@@ -321,77 +122,22 @@
             color: $Brown;
             padding: 0;
             justify-content:baseline;
-            .categoriesTitle{
-                display: flex;
-                overflow: hidden;
-                justify-content: center;
-                width: 100%;
-                //margin-top: 35px;
-                .icon{
-                    color: $DarkBlue;
-                    width: 15px;
-                    margin-top: -25px;
-                }
-                h2{
-                    color: $Brown;
-                    font-size: 40px;
-                    margin: 0;
-                   // @extend .title;
-                }
-            }
-            li{
-            width:48%;
-            margin:  1%;
-            }
-        }
-        .categoriesAuthors{
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            width: 100%;
-            justify-content: baseline;
-            border-top: 1px solid $DarkBlue;
-            padding: 0;
-            li{
-            padding: 10px 0;
-            border-radius: 10px;
-            width:19.5%;
-            display: flex;
-            flex-direction: column;
-            img{
-                width: 70px !important;
-                height: 70px !important;
-                border-radius: 50%;
-            }
-            h3{
-                color: $Brown;
-                font-size: 12px;
-                text-align: center;
-            }
-            }
+           li{
+            width: 47% !important;
+           }
+
         }
     }
     }
 }
 @media (max-width: 700px) {
-    .categories{
-        
+    .categories{     
         select{
-            position: sticky;
-            top: 90px;
-            width: 25%;
-            height: 50px;
-            margin-top: 68px;
-            background-color: $DarkBlue;
-            color: $LightGrey;
+            margin-top: 70px;
             font-size: 20px;
-            padding-left: 0px;
-            justify-content: center;
-            cursor: pointer;
+            padding-left: 5px;
         }
         .content{
-            padding-left: 50px;
-            width: 75%;
         .categoriesBooks{
             display: flex;
             flex-wrap: wrap;
@@ -399,54 +145,8 @@
             color: $Brown;
             padding: 0;
             justify-content:baseline;
-            .categoriesTitle{
-                display: flex;
-                overflow: hidden;
-                justify-content: center;
-                width: 100%;
-                //margin-top: 35px;
-                .icon{
-                    color: $DarkBlue;
-                    width: 15px;
-                    margin-top: -25px;
-                }
-                h2{
-                    color: $Brown;
-                    font-size: 40px;
-                    margin: 0;
-                   // @extend .title;
-                }
-            }
             li{
-                text-align: center;
-            width:98%;
-            margin:  1%;
-            }
-        }
-        .categoriesAuthors{
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            width: 100%;
-            justify-content: baseline;
-            border-top: 1px solid $DarkBlue;
-            padding: 0;
-            li{
-            padding: 10px 0;
-            border-radius: 10px;
-            width:19.5%;
-            display: flex;
-            flex-direction: column;
-            img{
-                width: 70px !important;
-                height: 70px !important;
-                border-radius: 50%;
-            }
-            h3{
-                color: $Brown;
-                font-size: 12px;
-                text-align: center;
-            }
+                width: 90% !important;
             }
         }
     }

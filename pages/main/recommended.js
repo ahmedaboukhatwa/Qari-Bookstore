@@ -5,34 +5,9 @@ import React, { Fragment,useContext, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { BooksContext } from '../api/booksContext'
 import { authors } from '../api/authorsContext'
+import BooksList from '../../components/BooksList'
 export default function Recommended() {
     const {books} = useContext(BooksContext);
-    const {favoritedBooks} = useContext(BooksContext);
-    const {addToCart} = useContext(BooksContext);
-    const {clickFavorite} = useContext(BooksContext);
-    const booksList = books.map((book,i) => {
-        return(
-            <li key={i}>
-                <div onClick={()=>{clickFavorite(book)}} className={styles.bookmark}>
-                    <FontAwesomeIcon className={styles.heartIcon} style ={{color:book.isFavorited? "red" :""}} icon={faHeart} />
-                    <FontAwesomeIcon icon={faBookmark} />
-                </div>
-                <Image src={book.img} alt={book.name} width={300} height={300} />
-                <div className={styles.bookFooter}>
-                    <div className={styles.bookIntro}>
-                        <h2>{book.name}</h2>
-                        <span>Category: {book.category}</span>
-                    </div>
-                    <div className={styles.bookPrice}>
-                        <h3>{book.price}$</h3>
-                        <button onClick={()=>{addToCart(book)}}>
-                            {book.inCart?"Added":" Add"}        
-                        </button>
-                    </div>
-                </div>
-            </li>
-        )
-    });
     const authorsList = authors.map((author,i)=>{
         return(
             <li key={i}>
@@ -50,11 +25,11 @@ export default function Recommended() {
                     <FontAwesomeIcon className={styles.icon} icon={faQuoteRight} />
                 </span>
                 <ul className={styles.recommendedBooks}>
-                    {booksList}
+                    <BooksList filterdBooks={books}/>
                 </ul >
-                <ul className={styles.recommendedAuthors}>
+                {/* <ul className={styles.recommendedAuthors}>
                 {authorsList}
-                </ul>
+                </ul> */}
             </div>
         </Fragment>
     )
