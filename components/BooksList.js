@@ -18,7 +18,7 @@ export default function BooksList(props) {
                     <FontAwesomeIcon icon={faBookmark} />
                 </div>
                 <div className={styles.bookImg}>
-                <Image src={book.img} alt={book.name} width={100} height={200} />
+                <Image src={book.img} alt={book.name} width={150} height={200} />
                 </div>
                 <div className={styles.bookFooter}>
                     <div className={styles.bookIntro}>

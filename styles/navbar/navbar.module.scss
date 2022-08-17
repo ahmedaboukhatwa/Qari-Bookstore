@@ -12,7 +12,7 @@
     justify-content: space-between;
     @extend .container; 
     span{
-        background-color: $Brown;
+        background-color: $LightBrown;
 
     }
     nav{
@@ -20,11 +20,11 @@
             font-size: 20px;
             padding: 20px;
             &:hover{
-                background-color: $Brown;
+                background-color: $LightBrown;
             }     
         }
         .active{
-            background-color: $Brown;         
+            background-color: $LightBrown;         
         }
     }
     ul{
@@ -58,7 +58,7 @@
             font-size: 15px;
             padding: 25px;
             &:hover{
-                background-color: $Brown;
+                background-color: $LightBrown;
             }     
         }
     }
@@ -79,7 +79,7 @@
                 font-size: 13px;
                 padding: 20px;
                 &:hover{
-                    background-color: $Brown;
+                    background-color: $LightBrown;
                 }     
             }
         }
@@ -100,7 +100,7 @@
                 font-size: 10px;
                 padding: 23px 20px;
                 &:hover{
-                    background-color: $Brown;
+                    background-color: $LightBrown;
                 }     
             }
         }
@@ -131,7 +131,7 @@
                 font-size: 13px;
                 padding: 25px 15px;
                 &:hover{
-                    background-color: $Brown;
+                    background-color: $LightBrown;
                 }     
             }
         }
