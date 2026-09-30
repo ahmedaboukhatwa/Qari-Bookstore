@@ -4,13 +4,18 @@
     display: flex;
     flex-direction: column;
     min-height: 637px;
+    padding-top: 34px;
+    padding-bottom: 28px;
     input{
         height: 50px;
         border-radius: 5px;
         margin-top: 5px;
         padding: 10px;
         outline: none;
-        border: 1px solid $Brown;
+        border: 1px solid rgba(255, 255, 255, 0.78);
+        background: rgba(244, 250, 248, 0.62);
+        box-shadow: 0 12px 30px rgba(20, 54, 58, 0.08);
+        backdrop-filter: blur(14px);
         font-size: 20px;
         &:first-child{
             margin-top: 50px;
@@ -28,14 +33,17 @@
         margin-top: 25px;
         padding: 10px;
         outline: none;
-        border: 1px solid $Brown;
+        border: 1px solid rgba(255, 255, 255, 0.78);
+        background: rgba(244, 250, 248, 0.62);
+        box-shadow: 0 12px 30px rgba(20, 54, 58, 0.08);
+        backdrop-filter: blur(14px);
         font-size: 20px;
         &::placeholder{
             font-size: 20px;
         }
     }
     button{
-        border-radius: 5px;
+        border-radius: 6px;
         background-color: $DarkBlue;
         color: $LightGrey;
         padding: 15px 0;
@@ -44,6 +52,11 @@
         outline: none;
         border: none;
         font-size: 20px;
+        transition: background-color 180ms ease, transform 180ms ease;
+        &:hover{
+            background-color: $Coral;
+            transform: translateY(-1px);
+        }
     }
 }
 @media (max-width: 992px) and (min-width: 769px) {

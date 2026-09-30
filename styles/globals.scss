@@ -1,11 +1,18 @@
 @import "./variables.module.scss";
 html,
 body {
-  background-color: $LightGrey;
+  min-height: 100%;
+  background-color: #dce9e5;
+  background-image:
+    linear-gradient(rgba(18, 63, 74, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 63, 74, 0.035) 1px, transparent 1px),
+    linear-gradient(135deg, #e7f0ec 0%, #cbded9 52%, #ebe7dd 100%);
+  background-size: 32px 32px, 32px 32px, cover;
+  background-attachment: fixed;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: $Brown;
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
 }
 
 a {
@@ -17,18 +24,17 @@ a {
   box-sizing: border-box;
 }
 ::-webkit-scrollbar{
-  width: 1em;
+  width: 10px;
 }
 ::-webkit-scrollbar-thumb{
-  background: $Brown;
+  background: rgba(18, 63, 74, 0.58);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 8px;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }

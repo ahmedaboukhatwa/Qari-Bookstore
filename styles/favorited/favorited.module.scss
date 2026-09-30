@@ -14,13 +14,14 @@
         width: 100%;
         margin-top: 35px;
         .icon{
-            color: $DarkBlue;
+            color: $Coral;
             width: 15px;
             margin-top: -25px;
         }
         h2{
             color: $Brown;
-            font-size: 40px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 34px;
             margin: 0;
             @extend .title;
         }
@@ -55,28 +56,49 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid $GlassBorder;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: $GlassShadow;
+        backdrop-filter: blur(16px);
+        transition: transform 220ms ease, box-shadow 220ms ease;
+        &:hover{
+            transform: translateY(-4px);
+            box-shadow: 0 22px 44px rgba(20, 54, 58, 0.2);
+        }
         width:24%;
         margin: 0 1% 1% 0 ;
         .bookmark{
             cursor: pointer;
             position: absolute;
-            right: 30px;
-            top: -5px;
+            right: 12px;
+            top: 12px;
             color: $DarkBlue;
             z-index: 99;
-            width: 40px;
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.78);
+            border-radius: 50%;
+            background: rgba(244, 250, 248, 0.78);
+            backdrop-filter: blur(10px);
             overflow: hidden;
             .heartIcon{
-                color: $LightGrey;
+                color: $Coral;
                 width: 20px;
                 position: absolute;
-                transform: translate(10px,15px);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
         .bookFooter{
-            background-color: white;
-            padding: 10px;
+            background: $GlassSurface !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.7);
+            padding: 14px;
+            backdrop-filter: blur(14px);
             display: flex;
             flex-direction: column; 
             .bookIntro{
@@ -105,6 +127,7 @@
                 button{
                     background-color: $DarkBlue;
                     padding: 5px 30px;
+                    min-height: 44px;
                     cursor: pointer;
                     outline: none;
                     font-size: 20px;
@@ -160,10 +183,10 @@
             width:31.3%;
             margin: 0 2% 2% 0 ;
             .bookmark{
-                width: 35px;
+                width: 44px;
                 .heartIcon{
                     width: 20px;
-                    transform: translate(7.5px,12px);
+                    transform: translate(-50%, -50%);
                 }
             }
             .bookFooter{
@@ -316,15 +339,15 @@
                 }
             }
             li{
-            width:46%;
-            margin: 0 4% 4% 0 ;
+            width:100%;
+            margin: 0 0 4% 0;
             .bookmark{
                 right: 20px;
                 top: -5px;
-                width: 30px;
+                width: 44px;
                 .heartIcon{
                     width: 15px;
-                    transform: translate(7px,12px);
+                    transform: translate(-50%, -50%);
                 }
             }
             .bookFooter{

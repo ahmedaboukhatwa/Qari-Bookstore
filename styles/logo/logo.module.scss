@@ -1,7 +1,9 @@
 @import "../variables.module.scss";
 .logo{
-    color: $LightGrey;
-    font-size: 30px;
-    padding: 15px 5px;
-    @extend .title;
+    color: #f2f8f5;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 12px 5px;
+    white-space: nowrap;
 }

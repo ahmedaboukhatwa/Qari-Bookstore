@@ -14,7 +14,7 @@ export default function Favorited() {
         return(
             <li key={i}>
                 <div onClick={()=>{clickFavorite(book)}} className={styles.bookmark}>
-                    <FontAwesomeIcon className={styles.heartIcon} style ={{color:book.isFavorited? "red" :""}} icon={faHeart} />
+                    <FontAwesomeIcon className={styles.heartIcon} icon={faHeart} />
                     <FontAwesomeIcon icon={faBookmark} />
                 </div>
                 <Image src={book.img} alt={book.name} width={300} height={300} />

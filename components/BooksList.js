@@ -14,7 +14,7 @@ export default function BooksList(props) {
         return(
             <li key={i} className={styles.booksList}>
                 <div onClick={()=>{clickFavorite(book)}} className={styles.bookmark}>
-                    <FontAwesomeIcon className={styles.heartIcon} style ={{color:book.isFavorited? "red" :""}} icon={faHeart} />
+                    <FontAwesomeIcon className={`${styles.heartIcon} ${book.isFavorited ? styles.isFavorited : ""}`} icon={faHeart} />
                     <FontAwesomeIcon icon={faBookmark} />
                 </div>
                 <div className={styles.bookImg}>

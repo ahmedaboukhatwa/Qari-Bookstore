@@ -6,22 +6,24 @@
     justify-content: center;
     flex-wrap: wrap;
     @extend .container;
+    padding-top: 14px;
+    padding-bottom: 56px;
     .recommendedTitle{
         display: flex;
         overflow: hidden;
         justify-content: center;
         width: 100%;
-        margin-top: 35px;
+        margin: 28px 0 12px;
         .icon{
-            color: $DarkBlue;
+            color: $Coral;
             width: 15px;
             margin-top: -25px;
         }
         h2{
             color: $Brown;
-            font-size: 40px;
+            font-size: 34px;
             margin: 0;
-            @extend .title;
+            font-family: Georgia, "Times New Roman", serif;
         }
     }
     .recommendedBooks{
@@ -30,7 +32,8 @@
         list-style: none;
         color: $Brown;
         padding: 0;
-        justify-content: baseline;
+        justify-content: flex-start;
+        width: 100%;
     }
     .recommendedAuthors{
         display: flex;
@@ -81,7 +84,7 @@
                 width: 35px;
                 .heartIcon{
                     width: 20px;
-                    transform: translate(7.5px,12px);
+                    transform: translate(-50%, -50%);
                 }
             }
             .bookFooter{
@@ -160,7 +163,7 @@
                 color: $Brown;
                 font-size: 40px;
                 margin: 0;
-                @extend .title;
+                font-family: Georgia, "Times New Roman", serif;
             }
         }
         .recommendedBooks{
@@ -267,7 +270,7 @@
                 width: 30px;
                 .heartIcon{
                     width: 15px;
-                    transform: translate(7px,12px);
+                    transform: translate(-50%, -50%);
                 }
             }
             .bookFooter{
@@ -316,6 +319,18 @@
                 font-size: 15px;
                 font-weight: bold;
             }
+            }
+        }
+    }
+}
+@media (max-width: 480px){
+    .recommended{
+        padding-right: 6%;
+        padding-left: 6%;
+        .recommendedBooks{
+            .booksList{
+                width: 100% !important;
+                margin: 0 0 14px;
             }
         }
     }

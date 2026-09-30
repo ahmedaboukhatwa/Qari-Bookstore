@@ -4,34 +4,65 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    width:18%;
+    width:22%;
     margin: 1%;
-    box-shadow: Grey 0px 0px .6px 0px;
+    overflow: hidden;
+    border: 1px solid $GlassBorder;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: $GlassShadow;
+    backdrop-filter: blur(16px) saturate(125%);
+    -webkit-backdrop-filter: blur(16px) saturate(125%);
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    &:hover{
+        transform: translateY(-5px);
+        border-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 22px 44px rgba(20, 54, 58, 0.2);
+    }
     .bookmark{
         cursor: pointer;
         position: absolute;
-        right: 30px;
-        top: -5px;
+        right: 12px;
+        top: 12px;
         color: $DarkBlue;
         z-index: 99;
-        width: 40px;
+        width: 44px;
+        height: 44px;
         overflow: hidden;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.78);
+        border-radius: 50%;
+        background: rgba(244, 250, 248, 0.78);
+        backdrop-filter: blur(10px);
         .heartIcon{
             color: $LightGrey;
             width: 20px;
             position: absolute;
-            transform: translate(10px,15px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .isFavorited{
+            color: $Coral;
         }
     }
     .bookImg{
         display: flex;
         justify-content: center;
-        padding: 10px;
+        align-items: center;
+        min-height: 218px;
+        padding: 16px 10px 10px;
+        background: linear-gradient(155deg, rgba(255, 255, 255, 0.46), rgba(165, 216, 213, 0.16));
+        img{
+            object-fit: contain;
+        }
     }
     .bookFooter{
-        background-color: white;
-        padding: 10px;
-        height: 70%;
+        background: rgba(244, 250, 248, 0.76);
+        border-top: 1px solid rgba(255, 255, 255, 0.7);
+        padding: 14px;
+        min-height: 158px;
         display: flex;
         flex-direction: column; 
         justify-content: space-between;
@@ -43,10 +74,13 @@
                 padding: 0;
                 font-size: 20px;
                 text-align: center;
+                font-family: Georgia, "Times New Roman", serif;
             }
             span{
                 margin-bottom: 5px;
-                font-weight: bold;
+                font-size: 12px;
+                font-weight: 600;
+                color: rgba(24, 59, 62, 0.75);
             }
         }
         .bookPrice{
@@ -54,19 +88,26 @@
             justify-content: space-between;
             margin-top: 20px;
             h3{
-                color: $Brown;
+                color: $Coral;
                 margin: 0;
                 padding: 0;
                 font-size: 25px;
             }
             button{
                 background-color: $DarkBlue;
-                padding: 5px 20px;
+                padding: 9px 15px;
+                border-radius: 5px;
                 cursor: pointer;
                 outline: none;
                 font-size: 20px;
                 color: $LightGrey;
                 border: none;
+                min-height: 44px;
+                transition: background-color 180ms ease, transform 180ms ease;
+                &:hover{
+                    background-color: $Coral;
+                    transform: translateY(-1px);
+                }
             }
         }    
     }
@@ -101,10 +142,10 @@
         width:29% !important;
         .bookmark{
             right: 20px;
-            width: 30px;
+            width: 44px;
             .heartIcon{
                 width: 15px;
-                transform: translate(7.5px,10px);
+                transform: translate(-50%, -50%);
             }
         }
         .bookFooter{
@@ -122,10 +163,10 @@
         width:46% !important;
         .bookmark{
             right: 20px;
-            width: 30px;
+            width: 44px;
             .heartIcon{
                 width: 15px;
-                transform: translate(7.5px,10px);
+                transform: translate(-50%, -50%);
             }
         }
         .bookFooter{
@@ -137,4 +178,16 @@
             }    
         }
     } 
+}
+@media (max-width: 480px){
+    .booksList{
+        width: 100% !important;
+        margin: 0 0 14px;
+        .bookmark{
+            width: 44px;
+            height: 44px;
+            right: 12px;
+            top: 12px;
+        }
+    }
 }
