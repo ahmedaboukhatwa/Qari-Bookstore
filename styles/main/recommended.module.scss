@@ -35,6 +35,12 @@
         justify-content: flex-start;
         width: 100%;
     }
+    .noResults{
+        width: 100%;
+        padding: 24px 0;
+        color: $Brown;
+        text-align: center;
+    }
     .recommendedAuthors{
         display: flex;
         flex-wrap: wrap;

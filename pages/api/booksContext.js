@@ -145,6 +145,15 @@ export default function BooksProvider({children}) {
             
             }))
     };
+    const searchBooks = (query) => {
+        const normalizedQuery = query.trim().toLowerCase();
+        if (!normalizedQuery) return books;
+        return books.filter(book =>
+            [book.name, book.author, book.category].some(value =>
+                value.toLowerCase().includes(normalizedQuery)
+            )
+        );
+    };
     
     useEffect(()=>{
         setFavoritedCount(favoritedBooks.length);
@@ -161,6 +170,7 @@ export default function BooksProvider({children}) {
             favoritedBooks,favoritedCount,clickFavorite,
             inCartBooks,inCartCount,totalPrice,endPrice,addToCart,increaseQuantity,decreaseQuantity,done,
             filterdBooks,category,selectCategory,
+            searchBooks,
             }}>
             {children}
         </BooksContext.Provider >

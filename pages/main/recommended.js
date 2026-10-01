@@ -6,8 +6,9 @@ import Image from 'next/image'
 import { BooksContext } from '../api/booksContext'
 import { authors } from '../api/authorsContext'
 import BooksList from '../../components/BooksList'
-export default function Recommended() {
-    const {books} = useContext(BooksContext);
+export default function Recommended({ books: filteredBooks, isSearching = false }) {
+    const { books: catalogBooks } = useContext(BooksContext);
+    const books = filteredBooks || catalogBooks;
     const authorsList = authors.map((author,i)=>{
         return(
             <li key={i}>
@@ -21,11 +22,11 @@ export default function Recommended() {
             <div className={styles.recommended}>
                 <span className={styles.recommendedTitle}>
                     <FontAwesomeIcon className={styles.icon} icon={faQuoteLeft} />
-                    <h2>Recommended</h2>
+                    <h2>{isSearching ? 'Search Results' : 'Recommended'}</h2>
                     <FontAwesomeIcon className={styles.icon} icon={faQuoteRight} />
                 </span>
                 <ul className={styles.recommendedBooks}>
-                    <BooksList filterdBooks={books}/>
+                    {books.length > 0 ? <BooksList filterdBooks={books}/> : <li className={styles.noResults}>No books found.</li>}
                 </ul >
                 {/* <ul className={styles.recommendedAuthors}>
                 {authorsList}
